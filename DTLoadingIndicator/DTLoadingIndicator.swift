@@ -32,14 +32,14 @@ open class DTLoadingIndicator {
     }
     
     @discardableResult
-    open static func startFullScreenLoadingIndicator() -> UIActivityIndicatorView {
+    public static func startFullScreenLoadingIndicator() -> UIActivityIndicatorView {
         let window = UIApplication.shared.delegate!.window!!
         if let indicator = window.viewWithTag(FULL_SCREEN_LOADING_VIEW_TAG) as? UIActivityIndicatorView {
             // loading indicator is already on screen
             return indicator
         } else {
             // loading indicator isn't on screen yet -> create one
-            let indicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+            let indicator = UIActivityIndicatorView(style: .whiteLarge)
             indicator.tag = FULL_SCREEN_LOADING_VIEW_TAG
             
             // make the area larger
@@ -99,7 +99,7 @@ open class DTLoadingIndicator {
     }
 
     
-    open static func stopFullScreenLoadingIndicator() {
+    public static func stopFullScreenLoadingIndicator() {
         let view = UIApplication.shared.delegate!.window!!
         if let indicator = view.viewWithTag(FULL_SCREEN_LOADING_VIEW_TAG) {
             indicator.removeFromSuperview()
@@ -107,12 +107,12 @@ open class DTLoadingIndicator {
     }
     
     @discardableResult
-    open static func startLoadingIndicatorInView(_ view:UIView, verticalCenter:Bool = false, top:CGFloat = 0) -> UIActivityIndicatorView {
+    public static func startLoadingIndicatorInView(_ view:UIView, verticalCenter:Bool = false, top:CGFloat = 0) -> UIActivityIndicatorView {
         if let indicator = view.viewWithTag(IN_VIEW_LOADING_VIEW_TAG) as? UIActivityIndicatorView {
             // loading indicator is already in the view
             return indicator
         } else {
-            let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            let indicator = UIActivityIndicatorView(style: .gray)
             indicator.hidesWhenStopped = true
             indicator.tag = IN_VIEW_LOADING_VIEW_TAG
             indicator.translatesAutoresizingMaskIntoConstraints = false
@@ -161,7 +161,7 @@ open class DTLoadingIndicator {
         
     }
     
-    open static func stopLoadingIndicatorInView(_ view: UIView) {
+    public static func stopLoadingIndicatorInView(_ view: UIView) {
         if let indicator = view.viewWithTag(IN_VIEW_LOADING_VIEW_TAG) {
             indicator.removeFromSuperview()
         }
