@@ -59,7 +59,7 @@ open class DTLoadingIndicator {
     }
     
     @discardableResult
-    open static func startGiftFullScreenLoadingIndicator() -> FLAnimatedImageView {
+    public static func startGiftFullScreenLoadingIndicator() -> FLAnimatedImageView {
         let window = UIApplication.shared.delegate!.window!!
         if let indicator = window.viewWithTag(FULL_SCREEN_LOADING_VIEW_TAG) as? FLAnimatedImageView {
             // loading indicator is already on screen
@@ -131,7 +131,7 @@ open class DTLoadingIndicator {
     }
 
     @discardableResult
-    open static func startGiftLoadingIndicatorInView(_ view:UIView, verticalCenter:Bool = false, top:CGFloat = 0) -> FLAnimatedImageView {
+    public static func startGiftLoadingIndicatorInView(_ view:UIView, verticalCenter:Bool = false, top:CGFloat = 0) -> FLAnimatedImageView {
         if let indicator = view.viewWithTag(IN_VIEW_LOADING_VIEW_TAG) as? FLAnimatedImageView {
             // loading indicator is already in the view
             return indicator
