@@ -15,5 +15,9 @@ Pod::Spec.new do |s|
     'DTLoadingIndicator' => ['DTLoadingIndicator/*.{gif}']
   }
   s.dependency 'FLAnimatedImage', '~> 1.0'
-
+  
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => ''
+  }
+  
 end

@@ -18,7 +18,9 @@ class InViewLoadingViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         startLoading()
-        self.perform(#selector(FullScreenLoadingViewController.stopLoading), with: nil, afterDelay: 3)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+            self?.stopLoading()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

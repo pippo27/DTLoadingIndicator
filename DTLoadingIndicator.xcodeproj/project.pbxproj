@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E5BD55D93C303975B6D3309 /* Pods_DTLoadingIndicatorDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6323EC52ABD5E9FF1A8A22EA /* Pods_DTLoadingIndicatorDemo.framework */; };
+		1B3807352CAF9A4B0074DC23 /* Pods_DTLoadingIndicatorDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6323EC52ABD5E9FF1A8A22EA /* Pods_DTLoadingIndicatorDemo.framework */; };
+		1B3807362CAF9A4B0074DC23 /* Pods_DTLoadingIndicatorDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6323EC52ABD5E9FF1A8A22EA /* Pods_DTLoadingIndicatorDemo.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1F06D72F1DC722FE00253FD3 /* love.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1F06D72E1DC722FE00253FD3 /* love.gif */; };
 		1F50C6031D47544D00C6BBB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F50C6021D47544D00C6BBB7 /* AppDelegate.swift */; };
 		1F50C6051D47544D00C6BBB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F50C6041D47544D00C6BBB7 /* ViewController.swift */; };
@@ -18,6 +19,20 @@
 		1F50C6201D4754B500C6BBB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F50C61E1D4754B500C6BBB7 /* Main.storyboard */; };
 		1F50C6241D476EE600C6BBB7 /* InViewLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F50C6231D476EE600C6BBB7 /* InViewLoadingViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B3807372CAF9A4B0074DC23 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1B3807362CAF9A4B0074DC23 /* Pods_DTLoadingIndicatorDemo.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1F06D72E1DC722FE00253FD3 /* love.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = love.gif; sourceTree = "<group>"; };
@@ -41,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E5BD55D93C303975B6D3309 /* Pods_DTLoadingIndicatorDemo.framework in Frameworks */,
+				1B3807352CAF9A4B0074DC23 /* Pods_DTLoadingIndicatorDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +136,7 @@
 				1F50C5FD1D47544D00C6BBB7 /* Resources */,
 				E937623EF3C3364DA188046A /* [CP] Embed Pods Frameworks */,
 				4010A23A0146E378900BC4F5 /* [CP] Copy Pods Resources */,
+				1B3807372CAF9A4B0074DC23 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,10 +350,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = DTLoadingIndicatorDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daront.DTLoadingIndicatorDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -383,9 +399,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = DTLoadingIndicatorDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daront.DTLoadingIndicatorDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
